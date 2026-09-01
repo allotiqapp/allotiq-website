@@ -3,37 +3,7 @@ import PhoneWalkthrough from "@/components/PhoneWalkthrough";
 import WaitlistForm from "@/components/WaitlistForm";
 import { ShieldCheck, Zap, Activity } from "lucide-react";
 import { LogoWordmark } from "@/components/LogoWordmark";
-
-const FAQ: { q: string; a: string }[] = [
-  {
-    q: "Is it legal to use an app to track my medical marijuana purchases?",
-    a: "Yes. AllotIQ doesn't sell, distribute, or facilitate the purchase of cannabis — it's a personal calculator and record-keeping tool that operates entirely on data about purchases you've already legally made as a registered Florida patient or caregiver. Tracking your own already-legal activity isn't itself a regulated action.",
-  },
-  {
-    q: "Does the app itself handle or facilitate anything illegal?",
-    a: "No. AllotIQ never touches, transports, or facilitates a transaction involving cannabis itself — it only performs calculations on numbers (ounces, milligrams, dates) that you enter or sync from your own official state record. This isn't legal advice; if you have specific legal concerns, consult a licensed attorney.",
-  },
-  {
-    q: "Could using this app get me in trouble with my doctor, the state, or law enforcement?",
-    a: "No. AllotIQ never reports anything to your doctor, the state, or law enforcement. The only outbound connection it ever makes is reading your own data directly from the official Florida MMUR portal, using credentials you provide — nothing is ever submitted or sent anywhere by the app.",
-  },
-  {
-    q: "Is my data private?",
-    a: "Yes — full details in our Privacy Policy, but the short version: everything is stored on your own device, and we don't operate a server that holds your medical records.",
-  },
-  {
-    q: "What happens to my data if I lose my phone?",
-    a: "It stays protected. The app is locked behind Face ID, Touch ID, or fingerprint unlock, and your MMUR login is stored in your phone's secure hardware keychain, not as plain text.",
-  },
-  {
-    q: "Could a data breach expose my information?",
-    a: "Because AllotIQ has no central server or database, there's no single large-scale breach that could expose many patients' data at once. The worst case in a breach scenario is one physically compromised device — not a nationwide registry leak.",
-  },
-  {
-    q: "Is AllotIQ HIPAA compliant?",
-    a: "HIPAA generally applies to healthcare providers, insurers, and their contracted vendors — not standalone consumer apps like this one. Regardless of whether HIPAA technically applies, AllotIQ is built on an on-device-only architecture that meets a stricter privacy bar than HIPAA requires of a typical cloud-connected health app.",
-  },
-];
+import FAQAccordion from "@/components/FAQAccordion";
 
 export default function Home() {
   return (
@@ -106,14 +76,7 @@ export default function Home() {
       {/* FAQ */}
       <section className="py-24 px-6 max-w-3xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-white text-center mb-12">Frequently Asked Questions</h2>
-        <div className="space-y-8">
-          {FAQ.map((item) => (
-            <div key={item.q}>
-              <h3 className="text-lg font-semibold text-white mb-2">{item.q}</h3>
-              <p className="text-slate-400 leading-relaxed">{item.a}</p>
-            </div>
-          ))}
-        </div>
+        <FAQAccordion />
       </section>
 
       {/* Footer */}
@@ -135,9 +98,15 @@ export default function Home() {
           <span>. All rights reserved.</span>
         </div>
         <p className="mt-2 text-sm">Made for Florida Patients (Rule 64-4.224)</p>
-        <Link href="/privacy" className="mt-4 text-sm text-slate-400 hover:text-brand-emerald transition-colors underline">
-          Privacy Policy
-        </Link>
+        <div className="mt-4 flex items-center gap-4 text-sm">
+          <Link href="/setup" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            Getting Set Up
+          </Link>
+          <span className="text-slate-700">·</span>
+          <Link href="/privacy" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            Privacy Policy
+          </Link>
+        </div>
       </footer>
     </main>
   );
