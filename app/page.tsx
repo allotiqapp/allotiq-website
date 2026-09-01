@@ -12,7 +12,7 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full flex items-center justify-between gap-2 px-4 sm:px-8 py-3 sm:py-4 bg-brand-slate/80 backdrop-blur-md z-50 border-b border-white/5">
         <div className="flex items-center space-x-2 sm:space-x-3 min-w-0">
-          <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden shadow-lg shadow-brand-emerald/20 flex-shrink-0 relative">
+          <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl overflow-hidden shadow-lg shadow-brand-emerald/20 flex-shrink-0 relative">
             {/* The uploaded interlocking AQ logo */}
             <img src="/icon.png" alt="AllotIQ Icon" className="w-full h-full object-cover" />
           </div>
