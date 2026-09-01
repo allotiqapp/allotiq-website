@@ -34,7 +34,7 @@ export default function PrivacyRequestPage() {
           <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl overflow-hidden shadow-lg shadow-brand-emerald/20 flex-shrink-0 relative">
             <img src="/icon.png" alt="AllotIQ Icon" className="w-full h-full object-cover" />
           </div>
-          <LogoWordmark className="text-lg sm:text-2xl" />
+          <LogoWordmark className="text-4xl sm:text-5xl" />
         </Link>
         <Link href="/privacy" className="text-sm text-slate-400 hover:text-white transition-colors">
           ← Back to Privacy Policy

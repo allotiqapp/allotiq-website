@@ -16,7 +16,7 @@ export default function Home() {
             {/* The uploaded interlocking AQ logo */}
             <img src="/icon.png" alt="AllotIQ Icon" className="w-full h-full object-cover" />
           </div>
-          <LogoWordmark className="text-lg sm:text-2xl" />
+          <LogoWordmark className="text-4xl sm:text-5xl" />
         </div>
         <a href="#waitlist" className="flex-shrink-0 whitespace-nowrap px-3 sm:px-5 py-1.5 sm:py-2 text-sm sm:text-base rounded-full bg-brand-emerald text-brand-slate font-semibold hover:bg-brand-emerald/90 transition-colors">
           Get Early Access
