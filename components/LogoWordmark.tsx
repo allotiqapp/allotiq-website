@@ -60,12 +60,11 @@ export function GlowingGaugeO({ className = "w-10 h-10", fillPercent = 75 }: { c
 
 export function LogoWordmark({ className = "h-8" }: { className?: string }) {
   return (
-    <div className={`flex items-center font-black tracking-tight uppercase leading-none ${className}`}>
-      <StylizedA className="inline-block h-[0.95em] w-[0.88em] mr-[0.04em] -translate-y-[0.02em]" />
-      <span className="text-white" style={{ fontSize: "1em" }}>LL</span>
-      <GlowingGaugeO className="inline-block h-[0.9em] w-[0.9em] mx-[0.04em] -translate-y-[0.03em]" />
-      <span className="text-white mr-[0.06em]" style={{ fontSize: "1em" }}>T</span>
-      <span className="text-cyan-400 font-medium tracking-normal" style={{ fontSize: "1em" }}>IQ</span>
-    </div>
+    <img
+      src="/logo-wordmark.png"
+      alt="AllotIQ"
+      className={`inline-block w-auto object-contain ${className}`}
+      style={{ height: "1.2em" }}
+    />
   );
 }
