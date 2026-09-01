@@ -4,6 +4,7 @@ import WaitlistForm from "@/components/WaitlistForm";
 import { ShieldCheck, Zap, Activity } from "lucide-react";
 import { LogoWordmark } from "@/components/LogoWordmark";
 import FAQAccordion from "@/components/FAQAccordion";
+import FeaturesSection from "@/components/FeaturesSection";
 
 export default function Home() {
   return (
@@ -58,9 +59,9 @@ export default function Home() {
           </div>
           <div className="p-8 rounded-3xl bg-brand-charcoal border border-white/5">
             <Activity className="w-10 h-10 text-brand-amber mb-6" />
-            <h3 className="text-2xl font-semibold text-white mb-3">Live MMUR Sync</h3>
+            <h3 className="text-2xl font-semibold text-white mb-3">Live MMUR Sync — or Manual Entry</h3>
             <p className="text-slate-400">
-              Sync directly with your state registry with one tap. Secure keychain storage safely manages your sessions.
+              Sync directly with your state registry with one tap, or skip that entirely and log purchases by hand. Your choice — either way, your limits stay accurate.
             </p>
           </div>
           <div className="p-8 rounded-3xl bg-brand-charcoal border border-white/5">
@@ -72,6 +73,8 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <FeaturesSection />
 
       {/* FAQ */}
       <section className="py-24 px-6 max-w-3xl mx-auto">
