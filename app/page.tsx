@@ -57,9 +57,9 @@ export default function Home() {
       <section className="relative pt-40 pb-20 px-6 flex flex-col items-center text-center">
         <div className="absolute inset-0 top-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-emerald/15 via-brand-slate/0 to-brand-slate/0 -z-10"></div>
         <h1 className="text-5xl md:text-7xl font-bold tracking-tight text-white max-w-4xl leading-tight">
-          Your prescription allowance, <br/>
+          Never wonder <br/>
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-emerald to-cyan-400">
-            perfectly balanced.
+            if you&apos;ve got enough again!
           </span>
         </h1>
         <p className="mt-8 text-xl text-slate-400 max-w-2xl">
