@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<!--
+  Netlify Forms detection snapshot — not a real page, never linked to or
+  rendered for visitors. Netlify registers a form by scanning literal static
+  HTML in the publish output at deploy time; this app's real waitlist form
+  lives in a "use client" React component (components/WaitlistForm.tsx),
+  which only ever exists as JS-rendered markup, so Netlify's scanner never
+  sees it there. Files under public/ are the one thing Netlify always
+  serves as flat static assets regardless of the Next.js Runtime's own
+  routing, so a plain copy of the form's markup here is what actually gets
+  scanned and registers "waitlist" as a known form. This is Netlify's own
+  documented pattern for JS-rendered/SSR frameworks:
+  https://docs.netlify.com/manage/forms/setup/#html-forms
+-->
+<html lang="en">
+  <head><meta charset="utf-8" /></head>
+  <body>
+    <form name="waitlist" data-netlify="true" hidden>
+      <input type="hidden" name="form-name" value="waitlist" />
+      <input type="email" name="email" />
+    </form>
+  </body>
+</html>
