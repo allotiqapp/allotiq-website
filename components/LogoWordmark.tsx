@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export function StylizedA({ className = "h-[1em] w-[0.9em]" }: { className?: string }) {
   return (
     <span className={`relative inline-flex items-center justify-center ${className}`}>
@@ -58,13 +60,32 @@ export function GlowingGaugeO({ className = "w-10 h-10", fillPercent = 75 }: { c
   );
 }
 
-export function LogoWordmark({ className = "h-8" }: { className?: string }) {
+export function LogoWordmark({ className = "h-8", priority = false }: { className?: string; priority?: boolean }) {
   return (
-    <img
-      src="/logo-wordmark.png"
+    <Image
+      src="/AQWordmark-transparent.png"
       alt="AllotIQ"
+      width={240}
+      height={80}
+      priority={priority}
       className={`inline-block w-auto object-contain ${className}`}
       style={{ height: "1.2em" }}
     />
   );
 }
+
+export function AQIconLogo({ className = "h-10 sm:h-12", priority = false }: { className?: string; priority?: boolean }) {
+  return (
+    <div className={`relative inline-flex items-center ${className}`}>
+      <Image
+        src="/AQIconLogo-transparent.png"
+        alt="AllotIQ Logo"
+        width={300}
+        height={100}
+        priority={priority}
+        className="h-full w-auto object-contain"
+      />
+    </div>
+  );
+}
+
