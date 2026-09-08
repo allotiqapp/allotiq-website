@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LogoWordmark } from "@/components/LogoWordmark";
+import { AQIconLogo } from "@/components/LogoWordmark";
 
 export const metadata = {
   title: "Privacy Policy — AllotIQ",
@@ -55,11 +55,8 @@ export default function PrivacyPolicy() {
   return (
     <main className="min-h-screen bg-brand-slate selection:bg-brand-emerald/30">
       <nav className="w-full flex items-center justify-between gap-2 px-4 sm:px-8 py-3 sm:py-4 border-b border-white/5">
-        <Link href="/" className="flex items-center space-x-2 sm:space-x-3">
-          <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl overflow-hidden shadow-lg shadow-brand-emerald/20 flex-shrink-0 relative">
-            <img src="/icon.png" alt="AllotIQ Icon" className="w-full h-full object-cover" />
-          </div>
-          <LogoWordmark className="text-4xl sm:text-5xl" />
+        <Link href="/" className="flex items-center min-w-0">
+          <AQIconLogo className="h-10 sm:h-12" priority />
         </Link>
         <Link href="/" className="text-sm text-slate-400 hover:text-white transition-colors">
           ← Back to Home
