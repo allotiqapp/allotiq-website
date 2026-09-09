@@ -20,11 +20,16 @@ export default function WaitlistForm() {
     e.preventDefault();
     setStatus("submitting");
     try {
-      await fetch("/", {
+      // fetch() only rejects on a real network failure — a 404/500 response still
+      // resolves, so status must be checked explicitly or a submission that never
+      // actually reached Netlify's form handler (e.g. before the form was registered)
+      // shows as a false "You're on the list" instead of surfacing the failure.
+      const res = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({ "form-name": "waitlist", email }),
       });
+      if (!res.ok) throw new Error(`Form submission failed: ${res.status}`);
       setStatus("done");
     } catch {
       setStatus("error");
