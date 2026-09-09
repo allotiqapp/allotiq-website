@@ -37,8 +37,24 @@ const FAQ: { q: string; a: string }[] = [
 export default function FAQAccordion() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
+  // Built directly from the same FAQ array rendered below, so the structured data Google reads
+  // can never drift out of sync with what a visitor actually sees on the page.
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
   return (
     <div className="space-y-3">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       {FAQ.map((item, i) => {
         const isOpen = openIndex === i;
         return (

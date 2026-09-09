@@ -1,5 +1,17 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { AQIconLogo } from "@/components/LogoWordmark";
+
+export const metadata: Metadata = {
+  title: "How to Connect Your Florida MMUR Account — Setup Guide | AllotIQ",
+  description:
+    "Step-by-step guide to connecting AllotIQ to your official Florida MMUR registry account: log in, 1-tap import your card, doctor's orders, and purchase history, and turn on Face ID sync.",
+  openGraph: {
+    title: "How to Connect Your Florida MMUR Account | AllotIQ",
+    description: "A 5-step walkthrough for linking your Florida medical marijuana registry account to AllotIQ.",
+    url: "https://allotiq.com/setup",
+  },
+};
 
 const STEPS = [
   {
