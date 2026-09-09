@@ -50,7 +50,7 @@ export default function Navbar() {
           <a
             href="/#waitlist"
             onClick={handleLinkClick}
-            className="flex-shrink-0 whitespace-nowrap px-4 py-2 text-sm rounded-full bg-brand-emerald text-brand-slate font-semibold hover:bg-brand-emerald/90 transition-colors shadow-lg shadow-brand-emerald/20"
+            className="hidden sm:inline-flex flex-shrink-0 whitespace-nowrap px-4 py-2 text-sm rounded-full bg-brand-emerald text-brand-slate font-semibold hover:bg-brand-emerald/90 transition-colors shadow-lg shadow-brand-emerald/20"
           >
             Get Early Access
           </a>
