@@ -167,6 +167,14 @@ export default function CalculatorPage() {
             Home
           </Link>
           <span className="text-slate-700">·</span>
+          <Link href="/35-day-rule" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            The 35-Day Rule
+          </Link>
+          <span className="text-slate-700">·</span>
+          <Link href="/trulieve-eighth" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            Trulieve Eighth Math
+          </Link>
+          <span className="text-slate-700">·</span>
           <Link href="/setup" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
             Getting Set Up
           </Link>

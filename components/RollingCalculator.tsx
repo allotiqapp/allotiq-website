@@ -250,7 +250,8 @@ export default function RollingCalculator() {
                   <span>Statutory Rolling Calculation</span>
                 </div>
                 <p className="leading-relaxed">
-                  Under Florida Rule 64-4.224, whatever amount you dispensed on this date returns in full to your active balance on the exact day after the rolling period ends at 12:00 AM EST.
+                  Under Florida Rule 64-4.224, whatever amount you dispensed on this date returns in full to your active balance on the exact day after the rolling period ends at 12:00 AM EST.{" "}
+                  <a href="/35-day-rule" className="text-cyan-400 underline underline-offset-2 hover:text-white">How the rolling window actually counts.</a>
                 </p>
               </div>
             </div>
@@ -516,7 +517,8 @@ export default function RollingCalculator() {
             <Sparkles className="w-4 h-4 text-brand-emerald shrink-0 mt-0.5" />
             <div className="text-xs text-slate-300 leading-relaxed space-y-2">
               <p>
-                <strong className="text-brand-emerald">Why the difference?</strong> Trulieve calculates eighths using exact metric conversion (3.5g ÷ 28.3495g = <strong className="text-white">0.123 oz</strong>), whereas most other Florida MMTCs deduct standard fractions (<strong className="text-white">0.125 oz</strong>). When purchasing a full ounce (8 jars), Trulieve only deducts <strong className="text-brand-emerald">0.984 oz</strong> from your MMUR allotment — leaving <strong className="text-brand-emerald">0.016 oz</strong> of extra statutory buffer.
+                <strong className="text-brand-emerald">Why the difference?</strong> Trulieve calculates eighths using exact metric conversion (3.5g ÷ 28.3495g = <strong className="text-white">0.123 oz</strong>), whereas most other Florida MMTCs deduct standard fractions (<strong className="text-white">0.125 oz</strong>). When purchasing a full ounce (8 jars), Trulieve only deducts <strong className="text-brand-emerald">0.984 oz</strong> from your MMUR allotment — leaving <strong className="text-brand-emerald">0.016 oz</strong> of extra statutory buffer.{" "}
+                <a href="/trulieve-eighth" className="text-brand-emerald underline underline-offset-2 hover:text-white">Full breakdown here.</a>
               </p>
               <div className="pt-2 border-t border-white/5 flex flex-wrap items-center justify-between gap-2 text-emerald-400 font-medium">
                 <span>📱 <strong>No mental math needed at the counter:</strong> AllotIQ automatically converts your usable balance into exact eighths for both Trulieve and standard MMTCs right on your dashboard and lock screen.</span>

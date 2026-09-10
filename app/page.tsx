@@ -218,7 +218,15 @@ export default function Home() {
           <span>. All rights reserved.</span>
         </div>
         <p className="mt-2 text-sm">Made for Florida Patients (Rule 64-4.224)</p>
-        <div className="mt-4 flex items-center gap-4 text-sm">
+        <div className="mt-4 flex items-center gap-4 text-sm flex-wrap justify-center">
+          <Link href="/35-day-rule" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            The 35-Day Rule
+          </Link>
+          <span className="text-slate-700">·</span>
+          <Link href="/trulieve-eighth" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            Trulieve Eighth Math
+          </Link>
+          <span className="text-slate-700">·</span>
           <Link href="/setup" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
             Getting Set Up
           </Link>
