@@ -5,11 +5,9 @@ import {
   Mic,
   Leaf,
   FlaskConical,
-  Heart,
   Tag,
   Fingerprint,
   Type,
-  LayoutGrid,
   CalendarDays,
   HardDriveDownload,
   Users,
@@ -62,11 +60,6 @@ const KNOWLEDGE: Item[] = [
     body: "Pull up a product's real lab-tested Certificate of Analysis directly from certified Florida testing labs.",
   },
   {
-    icon: Heart,
-    title: "Favorite strains & restock alerts",
-    body: "Save your favorite cultivars, record symptom relief ratings, and get notified when your strain returns to dispensary shelves.",
-  },
-  {
     icon: Orbit,
     title: "Terpene synergy wheel",
     body: "Explore how dominant terpenes pair together (like Myrcene + Caryophyllene) to produce clinically targeted entourage effects.",
@@ -93,11 +86,6 @@ const REAL_LIFE: Item[] = [
     icon: Type,
     title: "Big Text mode",
     body: "Bump every number and label up a size, built for patients who need it without digging through a settings menu.",
-  },
-  {
-    icon: LayoutGrid,
-    title: "Lock Screen & Home widgets",
-    body: "Glance at your dispensable flower gauge or 35-day return countdown silently without unlocking your phone — perfect for dispensary waiting rooms.",
   },
   {
     icon: CalendarDays,
