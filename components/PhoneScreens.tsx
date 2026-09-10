@@ -374,70 +374,85 @@ export function Screen3Calculator({ spotlight = true }: { spotlight?: boolean })
   );
 }
 
-// SCREEN 4: 7 INDEPENDENT STATUTORY ROUTES (Rule 64-4.224)
+// SCREEN 4: SMOKING'S OWN CAP + THE SHARED NON-SMOKING AGGREGATE POOL (Rule 64-4.224(4))
 export function Screen4Routes({ spotlight = true }: { spotlight?: boolean }) {
-  const routes = [
-    { name: "Smokable Flower", used: "1.875", cap: "2.500", unit: "oz", pct: 75, color: "from-emerald-500 to-teal-400" },
-    { name: "Inhalation (Vapes)", used: "18,200", cap: "24,500", unit: "mg", pct: 74, color: "from-cyan-500 to-blue-400", highlight: true },
-    { name: "Edibles", used: "2,100", cap: "4,200", unit: "mg", pct: 50, color: "from-amber-500 to-orange-400" },
-    { name: "Oral", used: "9,800", cap: "14,000", unit: "mg", pct: 70, color: "from-purple-500 to-indigo-400" },
-    { name: "Sublingual", used: "13,300", cap: "13,300", unit: "mg", pct: 100, color: "from-rose-500 to-pink-500" },
+  // Rule 64-4.224(4): "An aggregate 70-day supply limit of marijuana, other than marijuana in a
+  // form for smoking, shall not exceed 24,500 mg of THC" — Inhalation, Oral, Edibles, Topical,
+  // Sublingual, and Suppository all draw down ONE shared pool, not six independent ones. Only
+  // Smoking (flower) has its own separate, unrelated 35-day cap. The per-route figures below are
+  // each route's contribution toward that single combined total, not a separate cap of its own.
+  const nonSmokingBreakdown = [
+    { name: "Inhalation (Vapes)", used: 8300 },
+    { name: "Oral", used: 5900 },
+    { name: "Edibles", used: 2100 },
+    { name: "Sublingual", used: 1900 },
   ];
+  const aggregateCap = 24500;
+  const aggregateUsed = nonSmokingBreakdown.reduce((sum, r) => sum + r.used, 0);
+  const aggregatePct = Math.round((aggregateUsed / aggregateCap) * 100);
 
   return (
     <div className="relative w-full h-full bg-[#0B1220] p-4 flex flex-col justify-between select-none text-left">
       <div>
         <div className="flex items-center justify-between pb-2 mb-2 border-b border-white/5">
           <div>
-            <p className="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Rule 64-4.224</p>
+            <p className="text-[9px] uppercase tracking-wider text-slate-400 font-bold">Rule 64-4.224(4)</p>
             <p className="text-xs font-bold text-white flex items-center gap-1.5">
-              <Layers className="w-3.5 h-3.5 text-cyan-400" /> 7 Independent Routes
+              <Layers className="w-3.5 h-3.5 text-cyan-400" /> 1 Flower Cap + 1 Shared Pool
             </p>
           </div>
           <span className="text-[9px] px-2 py-0.5 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 font-bold">
-            NO SHARED POOL
+            AGGREGATE POOL
           </span>
         </div>
 
         <div className="space-y-2 mt-1">
-          {routes.map((r, i) => (
-            <div 
-              key={i} 
-              className={`p-2 rounded-xl border transition-all ${
-                r.highlight 
-                  ? "bg-cyan-950/30 border-cyan-500/50 shadow-[0_0_10px_rgba(6,182,212,0.15)]" 
-                  : "bg-[#131F33] border-white/5"
-              }`}
-            >
-              <div className="flex items-center justify-between text-[10px] font-bold mb-1">
-                <span className="text-slate-200">{r.name}</span>
-                <span className={r.pct >= 100 ? "text-rose-400 font-mono" : "text-slate-300 font-mono"}>
-                  {r.used} / {r.cap} {r.unit}
-                </span>
-              </div>
-              <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
-                <div 
-                  className={`h-full rounded-full bg-gradient-to-r ${r.color}`} 
-                  style={{ width: `${r.pct}%` }} 
-                />
-              </div>
-
-              {r.highlight && spotlight && (
-                <WhereToLookBeacon 
-                  top="50%" 
-                  left="75%" 
-                  label="Independent 70-Day Cap" 
-                  align="left" 
-                />
-              )}
+          {/* Smoking: its own separate cap, unrelated to everything else */}
+          <div className="p-2 rounded-xl border bg-[#131F33] border-white/5">
+            <div className="flex items-center justify-between text-[10px] font-bold mb-1">
+              <span className="text-slate-200">Smokable Flower</span>
+              <span className="text-slate-300 font-mono">1.875 / 2.500 oz</span>
             </div>
-          ))}
+            <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+              <div className="h-full rounded-full bg-gradient-to-r from-emerald-500 to-teal-400" style={{ width: "75%" }} />
+            </div>
+          </div>
+
+          {/* The one shared aggregate pool — this is what actually runs out for non-smoking routes */}
+          <div className="relative p-2 rounded-xl border transition-all bg-cyan-950/30 border-cyan-500/50 shadow-[0_0_10px_rgba(6,182,212,0.15)]">
+            <div className="flex items-center justify-between text-[10px] font-bold mb-1">
+              <span className="text-slate-200">Non-Smoking Aggregate</span>
+              <span className={aggregatePct >= 100 ? "text-rose-400 font-mono" : "text-slate-300 font-mono"}>
+                {aggregateUsed.toLocaleString()} / {aggregateCap.toLocaleString()} mg
+              </span>
+            </div>
+            <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
+              <div
+                className="h-full rounded-full bg-gradient-to-r from-cyan-500 to-blue-400"
+                style={{ width: `${aggregatePct}%` }}
+              />
+            </div>
+            <div className="mt-1.5 flex flex-wrap gap-x-2 gap-y-0.5 text-[8px] text-slate-400 font-mono">
+              {nonSmokingBreakdown.map((r) => (
+                <span key={r.name}>{r.name}: {r.used.toLocaleString()}mg</span>
+              ))}
+            </div>
+
+            {spotlight && (
+              <WhereToLookBeacon
+                top="50%"
+                left="75%"
+                label="Shared 70-Day Cap"
+                align="left"
+              />
+            )}
+          </div>
         </div>
       </div>
 
       <div className="mt-2 p-2 rounded-lg bg-[#111C2E] border border-white/5 text-[9px] text-slate-400 flex items-center gap-1.5">
         <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0" />
-        <span>Vaping heavily does <strong>NOT</strong> reduce your flower or edible balance!</span>
+        <span>Vaping heavily does <strong>NOT</strong> touch your separate flower cap — but it DOES count against the shared non-smoking pool with your edibles and oral doses.</span>
       </div>
     </div>
   );
