@@ -58,9 +58,14 @@ export default function PrivacyPolicy() {
         <Link href="/" className="flex items-center min-w-0">
           <AQIconLogo className="h-10 sm:h-12" priority />
         </Link>
-        <Link href="/" className="text-sm text-slate-400 hover:text-white transition-colors">
-          ← Back to Home
-        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/terms" className="text-sm text-slate-400 hover:text-white transition-colors">
+            Terms of Service
+          </Link>
+          <Link href="/" className="text-sm text-slate-400 hover:text-white transition-colors">
+            ← Back to Home
+          </Link>
+        </div>
       </nav>
 
       <div className="max-w-3xl mx-auto px-6 py-16">

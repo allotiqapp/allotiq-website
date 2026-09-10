@@ -58,6 +58,10 @@ export default function TipPage() {
           <Link href="/privacy" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
             Privacy Policy
           </Link>
+          <span className="text-slate-700">·</span>
+          <Link href="/terms" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            Terms of Service
+          </Link>
         </div>
       </footer>
     </main>

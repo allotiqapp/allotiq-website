@@ -235,6 +235,10 @@ export default function Home() {
             Privacy Policy
           </Link>
           <span className="text-slate-700">·</span>
+          <Link href="/terms" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            Terms of Service
+          </Link>
+          <span className="text-slate-700">·</span>
           <Link href="/tip" className="text-slate-400 hover:text-amber-400 transition-colors underline">
             Tip Jar ☕
           </Link>
