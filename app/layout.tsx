@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     description,
     url: "https://allotiq.com",
     siteName: "AllotIQ",
-    images: [{ url: "/AQIconLogo.png", width: 1024, height: 341, alt: "AllotIQ Logo" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AllotIQ — Florida MMJ Allotment Tracker" }],
     locale: "en_US",
     type: "website",
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title,
     description,
     site: "@AllotIQ",
-    images: ["/AQIconLogo.png"],
+    images: ["/og-image.png"],
   },
   icons: {
     icon: "/icon.png",

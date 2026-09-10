@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     description: "The exact metric math behind Trulieve's eighth, and how much allotment buffer it actually saves you.",
     url: "https://allotiq.com/trulieve-eighth",
     siteName: "AllotIQ",
-    images: [{ url: "/AQIconLogo.png", width: 1024, height: 341, alt: "AllotIQ Logo" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AllotIQ — Florida MMJ Allotment Tracker" }],
     locale: "en_US",
     type: "article",
   },
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Trulieve's 0.123 oz Eighth vs a Standard 0.125 oz Eighth",
     description: "The exact metric math, and how much buffer it saves on your Florida MMJ allotment.",
-    images: ["/AQIconLogo.png"],
+    images: ["/og-image.png"],
   },
 };
 

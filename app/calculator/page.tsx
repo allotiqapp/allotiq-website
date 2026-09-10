@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'AllotIQ',
     images: [
       {
-        url: '/AQIconLogo.png',
+        url: '/og-image.png',
         width: 1024,
         height: 341,
         alt: 'AllotIQ Florida MMJ 35-Day Return Calculator',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title: 'Florida MMJ 35-Day Return & Allotment Calculator | AllotIQ',
     description:
       'Free Florida medical marijuana calculator: exact 35-day return countdowns & Trulieve 0.123 oz math.',
-    images: ['/AQIconLogo.png'],
+    images: ['/og-image.png'],
   },
 };
 

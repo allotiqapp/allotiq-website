@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       "A real rolling window, not a calendar reset — how Florida's 35-day flower limit actually counts, with worked examples.",
     url: "https://allotiq.com/35-day-rule",
     siteName: "AllotIQ",
-    images: [{ url: "/AQIconLogo.png", width: 1024, height: 341, alt: "AllotIQ Logo" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "AllotIQ — Florida MMJ Allotment Tracker" }],
     locale: "en_US",
     type: "article",
   },
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Florida's 35-Day Medical Marijuana Rule, Explained",
     description: "How the rolling window actually counts, with worked examples.",
-    images: ["/AQIconLogo.png"],
+    images: ["/og-image.png"],
   },
 };
 
