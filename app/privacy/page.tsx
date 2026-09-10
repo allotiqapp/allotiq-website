@@ -70,7 +70,7 @@ export default function PrivacyPolicy() {
 
       <div className="max-w-3xl mx-auto px-6 py-16">
         <h1 className="text-4xl font-bold text-white mb-2">Privacy Policy</h1>
-        <p className="text-slate-500 mb-10">Last updated: August 31, 2026</p>
+        <p className="text-slate-500 mb-10">Last updated: September 10, 2026</p>
 
         <p className="text-slate-400 leading-relaxed mb-4">
           This Privacy Policy for AllotIQ (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) describes how and why we
@@ -248,9 +248,20 @@ export default function PrivacyPolicy() {
         <Section id="dnt" title="9. Controls For Do-Not-Track Features">
           <p>
             Most browsers and some mobile operating systems include a Do-Not-Track (&quot;DNT&quot;) feature. No
-            uniform standard for recognizing DNT signals has been finalized, so we do not currently respond to them.
-            This is a low-stakes disclosure for this app in particular, since there is no tracking to opt out of in
-            the first place — no analytics or advertising technology exists here to respond to such a signal.
+            uniform standard for recognizing DNT signals has been finalized, so this website does not currently
+            respond to them.
+          </p>
+          <p>
+            This website (allotiq.com) uses <strong className="text-slate-200">Cloudflare Web Analytics</strong> to
+            measure aggregate page-view traffic. It does not use cookies, does not track you across other websites,
+            and does not collect any information that identifies you individually — it is not used for advertising.
+            Where a form on this website asks you to prove you&apos;re human (such as the waitlist signup), we use{" "}
+            <strong className="text-slate-200">Cloudflare Turnstile</strong> for bot protection.
+          </p>
+          <p>
+            The <strong className="text-slate-200">AllotIQ mobile app itself</strong> has no analytics or
+            advertising technology of any kind — this disclosure is specific to the allotiq.com website you may be
+            reading this on, not the app.
           </p>
         </Section>
 
@@ -359,6 +370,13 @@ export default function PrivacyPolicy() {
             When you use on-device AI features (voice assistant or receipt/label scanning), your voice recordings and
             photos are processed entirely on your device and are never uploaded anywhere. If our company ceased to
             exist tomorrow, your data would be entirely unaffected, because we never had a copy of it to begin with.
+          </p>
+          <p>
+            <strong className="text-slate-200">One exception:</strong> if you use AllotIQ&apos;s Siri Shortcuts
+            (iOS) or Google Assistant integration (Android) to ask a question by voice, your spoken request is
+            processed by Apple&apos;s or Google&apos;s own voice-recognition systems — not ours — before the
+            operating system opens the app. We never receive or store that raw audio ourselves; the app only
+            receives a short identifier telling it which question was asked.
           </p>
         </Section>
 
