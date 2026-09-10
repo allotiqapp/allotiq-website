@@ -81,6 +81,11 @@ export default function TermsOfService() {
             update these Terms from time to time as described in Section 14 — continued use of the Services after an
             update means you accept the revised Terms.
           </p>
+          <p>
+            You agree that accepting these Terms electronically — including simply by using the app — has the same
+            legal effect as a handwritten signature, and satisfies any legal requirement that an agreement be in
+            writing or signed.
+          </p>
         </Section>
 
         <Section id="eligibility" title="2. Who Can Use AllotIQ">
@@ -169,6 +174,20 @@ export default function TermsOfService() {
             — that we do not control and are not responsible for. Your use of those third-party services is governed
             by their own terms and privacy policies.
           </p>
+          <p>
+            <strong className="text-slate-200">If you downloaded AllotIQ from the Apple App Store,</strong> this
+            agreement is between you and us only, not Apple, and Apple is not responsible for the app or its
+            content. The license in Section 6 is limited to a non-transferable license to use the app on an
+            Apple-branded device you own or control, as permitted by the App Store&apos;s usage rules. We, not
+            Apple, are solely responsible for providing any maintenance and support for the app and for addressing
+            any claims relating to it (product liability, legal or regulatory requirements, and consumer protection
+            claims included) and any claim that the app infringes a third party&apos;s intellectual property. If the
+            app fails to conform to any warranty, you may notify Apple, and Apple will refund the purchase price (if
+            any) to you — to the maximum extent permitted by law, that is Apple&apos;s sole warranty obligation. You
+            represent that you are not located in a country subject to a U.S. government embargo or on any U.S.
+            government list of restricted parties. Apple and its subsidiaries are third-party beneficiaries of this
+            section and may enforce it against you.
+          </p>
         </Section>
 
         <Section id="disclaimer" title="9. Disclaimer of Warranties">
@@ -204,8 +223,8 @@ export default function TermsOfService() {
           <p>
             You may stop using AllotIQ at any time by deleting the app from your device, which also removes your
             locally stored data. We may suspend or terminate your access to the Services if you violate these Terms.
-            Sections that by their nature should survive termination — including Sections 7, 9, 10, 11, and 13 — will
-            survive.
+            Sections that by their nature should survive termination — including Sections 7, 8, 9, 10, 11, and 13 —
+            will survive.
           </p>
         </Section>
 
@@ -237,6 +256,12 @@ export default function TermsOfService() {
             1021 Rosetree Ln<br />
             Tarpon Springs, FL 34689-2854<br />
             United States
+          </p>
+          <p>
+            <strong className="text-slate-200">California residents:</strong> if a complaint with us is not
+            satisfactorily resolved, you may contact the Complaint Assistance Unit of the Division of Consumer
+            Services of the California Department of Consumer Affairs in writing at 1625 North Market Blvd., Suite N
+            112, Sacramento, California 95834, or by phone at (800) 952-5210 or (916) 445-1254.
           </p>
         </Section>
       </div>
