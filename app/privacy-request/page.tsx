@@ -110,6 +110,15 @@ export default function PrivacyRequestPage() {
 
       <footer className="border-t border-white/5 py-12 px-6 text-center text-slate-500">
         <p>Made for Florida Patients (Rule 64-4.224)</p>
+        <div className="mt-4 flex items-center justify-center gap-3 text-sm">
+          <Link href="/privacy" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            Privacy Policy
+          </Link>
+          <span className="text-slate-700">·</span>
+          <Link href="/terms" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
+            Terms of Service
+          </Link>
+        </div>
       </footer>
     </main>
   );
