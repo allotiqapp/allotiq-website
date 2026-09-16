@@ -42,6 +42,12 @@ export default function TipPage() {
         <p className="text-xs text-slate-500 max-w-md mt-1">
           Voluntary tips support free web tools and hosting. Not payment or license for the AllotIQ mobile application.
         </p>
+        <p className="mt-2 text-xs text-slate-600 max-w-md">
+          AllotIQ is an independent app. It is not affiliated with, endorsed by, or operated by the State of Florida, the Florida Department of Health, or the Office of Medical Marijuana Use. Official registry:{' '}
+          <a href="https://mmuregistry.flhealth.gov" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-emerald">
+            mmuregistry.flhealth.gov
+          </a>
+        </p>
         <div className="mt-4 flex items-center gap-4 text-xs">
           <Link href="/" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
             Home

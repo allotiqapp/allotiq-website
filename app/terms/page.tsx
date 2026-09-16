@@ -268,6 +268,12 @@ export default function TermsOfService() {
 
       <footer className="border-t border-white/5 py-12 px-6 text-center text-slate-500">
         <p>Made for Florida Patients (Rule 64-4.224)</p>
+        <p className="mt-2 text-xs text-slate-600 max-w-md mx-auto">
+          AllotIQ is an independent app. It is not affiliated with, endorsed by, or operated by the State of Florida, the Florida Department of Health, or the Office of Medical Marijuana Use. Official registry:{' '}
+          <a href="https://mmuregistry.flhealth.gov" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-emerald">
+            mmuregistry.flhealth.gov
+          </a>
+        </p>
       </footer>
     </main>
   );

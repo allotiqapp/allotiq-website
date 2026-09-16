@@ -240,6 +240,12 @@ export default function TrulieveEighthPage() {
           <span>. All rights reserved.</span>
         </div>
         <p className="mt-2 text-sm">Made for Florida Patients (Rule 64-4.224)</p>
+        <p className="mt-2 text-xs text-slate-600 max-w-md mx-auto">
+          AllotIQ is an independent app. It is not affiliated with, endorsed by, or operated by the State of Florida, the Florida Department of Health, or the Office of Medical Marijuana Use. Official registry:{' '}
+          <a href="https://mmuregistry.flhealth.gov" target="_blank" rel="noopener noreferrer" className="underline hover:text-brand-emerald">
+            mmuregistry.flhealth.gov
+          </a>
+        </p>
         <div className="mt-4 flex items-center justify-center gap-4 text-sm flex-wrap">
           <Link href="/" className="text-slate-400 hover:text-brand-emerald transition-colors underline">
             Home
